@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>MavenIntro 1.0-SNAPSHOT</td>
+              <td>1</td>
+            <td>26 &#1092;&#1077;&#1074;&#1088;. 2022, 14:01</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">step_defs.CucumberDemo.user_enter_test_test_com_to_email_field()</td>
+              <td>1</td>
+              <td class="duration" data-value="1632000">0.001</td>
+              <td class="duration" data-value="1632000">0.001</td>
+              <td class="duration" data-value="1632000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.CucumberDemo.user_should_click_on_log_in_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="370000">0.000</td>
+              <td class="duration" data-value="370000">0.000</td>
+              <td class="duration" data-value="370000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.CucumberDemo.user_should_enter_hello1234_in_password_input_field()</td>
+              <td>1</td>
+              <td class="duration" data-value="369000">0.000</td>
+              <td class="duration" data-value="369000">0.000</td>
+              <td class="duration" data-value="369000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.CucumberDemo.user_should_successfully_logged_in_to_the_facebook()</td>
+              <td>1</td>
+              <td class="duration" data-value="266000">0.000</td>
+              <td class="duration" data-value="266000">0.000</td>
+              <td class="duration" data-value="266000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.following_cars_should_be_displayed(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="555000">0.000</td>
+              <td class="duration" data-value="555000">0.000</td>
+              <td class="duration" data-value="555000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.following_menu_bar_should_be_displayed_on_the_home_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="1937000">0.001</td>
+              <td class="duration" data-value="1937000">0.001</td>
+              <td class="duration" data-value="1937000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.on_the_cart_user_should_see(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="382000">0.000</td>
+              <td class="duration" data-value="382000">0.000</td>
+              <td class="duration" data-value="382000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_click_on_arrigato()</td>
+              <td>1</td>
+              <td class="duration" data-value="356000">0.000</td>
+              <td class="duration" data-value="356000">0.000</td>
+              <td class="duration" data-value="356000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_click_on_sushi()</td>
+              <td>1</td>
+              <td class="duration" data-value="370000">0.000</td>
+              <td class="duration" data-value="370000">0.000</td>
+              <td class="duration" data-value="370000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_clicks_on_foods()</td>
+              <td>1</td>
+              <td class="duration" data-value="293000">0.000</td>
+              <td class="duration" data-value="293000">0.000</td>
+              <td class="duration" data-value="293000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_is_on_https_www_amazon_com()</td>
+              <td>1</td>
+              <td class="duration" data-value="258000">0.000</td>
+              <td class="duration" data-value="258000">0.000</td>
+              <td class="duration" data-value="258000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_is_on_namba_food()</td>
+              <td>1</td>
+              <td class="duration" data-value="329000">0.000</td>
+              <td class="duration" data-value="329000">0.000</td>
+              <td class="duration" data-value="329000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_shoul_find_kimchi()</td>
+              <td>1</td>
+              <td class="duration" data-value="357000">0.000</td>
+              <td class="duration" data-value="357000">0.000</td>
+              <td class="duration" data-value="357000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_shoul_scroll_down_to_arrigato_cafe()</td>
+              <td>1</td>
+              <td class="duration" data-value="1650000">0.001</td>
+              <td class="duration" data-value="1650000">0.001</td>
+              <td class="duration" data-value="1650000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_should_click_on_order_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="377000">0.000</td>
+              <td class="duration" data-value="377000">0.000</td>
+              <td class="duration" data-value="377000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_should_find_sushi_category()</td>
+              <td>1</td>
+              <td class="duration" data-value="833000">0.000</td>
+              <td class="duration" data-value="833000">0.000</td>
+              <td class="duration" data-value="833000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_should_increase_amount_to(java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="484000">0.000</td>
+              <td class="duration" data-value="484000">0.000</td>
+              <td class="duration" data-value="484000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_should_see(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="915000">0.000</td>
+              <td class="duration" data-value="915000">0.000</td>
+              <td class="duration" data-value="915000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_should_see_arrigato_menu()</td>
+              <td>1</td>
+              <td class="duration" data-value="387000">0.000</td>
+              <td class="duration" data-value="387000">0.000</td>
+              <td class="duration" data-value="387000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.user_should_see_list_of_cafes()</td>
+              <td>1</td>
+              <td class="duration" data-value="262000">0.000</td>
+              <td class="duration" data-value="262000">0.000</td>
+              <td class="duration" data-value="262000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.DataTable.when_user_is_on_cars_kg()</td>
+              <td>1</td>
+              <td class="duration" data-value="344000">0.000</td>
+              <td class="duration" data-value="344000">0.000</td>
+              <td class="duration" data-value="344000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.ScenarioOutlineDemo.user_clicks_on_login_button()</td>
+              <td>5</td>
+              <td class="duration" data-value="191000">0.000</td>
+              <td class="duration" data-value="191000">0.000</td>
+              <td class="duration" data-value="955000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.ScenarioOutlineDemo.user_enter(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="266800">0.000</td>
+              <td class="duration" data-value="266800">0.000</td>
+              <td class="duration" data-value="1334000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.ScenarioOutlineDemo.user_enters(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="293800">0.000</td>
+              <td class="duration" data-value="293800">0.000</td>
+              <td class="duration" data-value="1469000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.ScenarioOutlineDemo.user_is_on_facebook()</td>
+              <td>5</td>
+              <td class="duration" data-value="279000">0.000</td>
+              <td class="duration" data-value="279000">0.000</td>
+              <td class="duration" data-value="1395000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">step_defs.ScenarioOutlineDemo.user_should_see(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="276200">0.000</td>
+              <td class="duration" data-value="276200">0.000</td>
+              <td class="duration" data-value="1381000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>26</td>
+            <td>46</td>
+            <td class="duration">0.000</td>
+            <td class="duration">0.001</td>
+            <td class="duration">0.019</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
